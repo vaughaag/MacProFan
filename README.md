@@ -29,10 +29,10 @@ Either clone the script and service or create your own as below.
     ExecStart=/usr/bin/fan.sh
 
     [Install]
-    WantedBy=multi-user.target'
+    WantedBy=multi-user.target
 
 ###### Create the script
-    sudo nano /usr/bin/fan.sh'
+    sudo nano /usr/bin/fan.sh
 
     #!/bin/sh
     echo 900 > /sys/devices/platform/applesmc.768/fan1_min
@@ -44,14 +44,14 @@ Either clone the script and service or create your own as below.
 
 ###### Make the script executable
 
-    sudo chmod 755 /usr/bin/fan.sh'
+    sudo chmod 755 /usr/bin/fan.sh
 
 ###### Enable the service
 
-    sudo systemctl enable startfan.service'
+    sudo systemctl enable startfan.service
 
 ###### Start the service
 
-    sudo systemctl start startfan.service'
+    sudo systemctl start startfan.service
 
 You should hear the fans spin up. 
