@@ -13,45 +13,45 @@ My solution was something a little simpler than an daemon, a simple script to lo
 
 The fan speeds within the uploaded scripts are based on my every day useage and the position of my system as the fans can be noisy.
 
-###### Testing
+## Testing
 I am using pure Arch on my system but have tested it in Ubuntu, Mint, Manjaro. 
 
-###### Instillation
+## Instillation
 Either clone the script and service or create your own as below.
 
-1. Create the service
-sudo nano /etc/systemd/service/startfan.service
+###### Create the service
+'sudo nano /etc/systemd/service/startfan.service'
 
-    [Unit]
-    Description=Script
+'[Unit]
+ Description=Script
 
-    [Service]
-    ExecStart=/usr/bin/fan.sh
+ [Service]
+ ExecStart=/usr/bin/fan.sh
 
-    [Install]
-    WantedBy=multi-user.target
+ [Install]
+ WantedBy=multi-user.target'
 
-2. Create the script
-sudo nano /usr/bin/fan.sh
+###### Create the script
+'sudo nano /usr/bin/fan.sh'
 
-    #!/bin/sh
+'   #!/bin/sh
     echo 900 > /sys/devices/platform/applesmc.768/fan1_min
     echo 1400 > /sys/devices/platform/applesmc.768/fan2_min
     echo 1400 > /sys/devices/platform/applesmc.768/fan3_min
     echo 900 > /sys/devices/platform/applesmc.768/fan4_min
     echo 3000 > /sys/devices/platform/applesmc.768/fan5_min
-    echo 3000 > /sys/devices/platform/applesmc.768/fan6_min
+    echo 3000 > /sys/devies/platform/applesmc.768/fan6_min'
 
-3. Make the script executable
+###### Make the script executable
 
-sudo chmod 755 /usr/bin/fan.sh
+'sudo chmod 755 /usr/bin/fan.sh'
 
-4. Enable the service
+###### Enable the service
 
-sudo systemctl enable startfan.service
+'sudo systemctl enable startfan.service'
 
-5. Start the service
+###### Start the service
 
-sudo systemctl start startfan.service
+'sudo systemctl start startfan.service'
 
-You should hear the fans spin up 
+You should hear the fans spin up. 
