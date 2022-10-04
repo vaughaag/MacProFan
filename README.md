@@ -21,7 +21,7 @@ Either clone the script and service or create your own as below.
 
 ###### Create the service
 
-sudo nano /etc/systemd/service/startfan.service'
+      sudo nano /etc/systemd/service/startfan.service
     
     [Unit]
     Description=Script
@@ -34,7 +34,7 @@ sudo nano /etc/systemd/service/startfan.service'
 
 ###### Create the script
 
-sudo nano /usr/bin/fan.sh
+      sudo nano /usr/bin/fan.sh
 
     #!/bin/sh
     echo 900 > /sys/devices/platform/applesmc.768/fan1_min
