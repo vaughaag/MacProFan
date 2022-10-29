@@ -22,7 +22,7 @@ Either clone the script and service or create your own as below.
 
 #### Create the service
 
-    sudo nano /etc/systemd/service/startfan.service
+    sudo nano /etc/systemd/system/startfan.service
 ---
     
     [Unit]
