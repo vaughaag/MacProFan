@@ -6,7 +6,7 @@ My cMP has six fans but for older models, just comment out or exclude as require
 ## Background
 I wanted to repurpose my Mac Pro, I had been running Open Core with macOS Big Sur and Windows as a dual boot but after installing Arch on my aging iMac, I thought Linux on the Mac Pro was the best way to go.
 
-After installing, I went looking for a way to control the fans and the temps were rising, especially the Northbrige. I found a few apps, namely MBPFAN and MACFAND but these were either limited on the number of fans and/or I found the service reset.
+After installing, I went looking for a way to control the fans as the temps were rising, especially the Northbrige. I found a few apps, namely MBPFAN and MACFAND but these were either limited on the number of fans and/or I found the service reset.
 
 ## My Script
 My solution was something a little simpler than an active daemon, a simple script to load at startup and re-write the apple smc min fan speed files, increasing the speed to a set level. 
